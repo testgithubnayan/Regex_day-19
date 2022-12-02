@@ -3,7 +3,7 @@ package com.bridgelabz.regex;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class UserRegistration {
+public class UserRegistration  {
     public void validFirstName() {
 
         Scanner sc = new Scanner(System.in);
