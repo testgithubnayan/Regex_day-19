@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-
     public boolean validFirstName(String name) {
 // firstName or lastName starts with Cap and has minimum 3 characters
 
@@ -319,6 +318,60 @@ public class UserRegistration {
         }
     }
 
+    public void validLastName(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the last name : ");
+        String lastName = sc.nextLine();
+
+        boolean fName = Pattern.matches("^[A-Z]+[a-zA-Z]{2,}[0-9]*$", lastName);
+
+        if (fName) {
+            System.out.println("lastname is correct ");
+        } else {
+            System.out.println("lastname is incorrect ");
+        }
+    }
+
+    public void validEmailId() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter email id");
+        String email = sc.nextLine();
+
+        boolean validEmail = Pattern.matches("^[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})*$", email);
+        if (validEmail) {
+            System.out.println("Email is valid");
+        } else {
+            System.out.println("Email is invalid");
+        }
+    }
+
+    public void validPhoneNumber() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Phone number: ");
+        String phoneNumber = sc.nextLine();
+        boolean number = Pattern.matches("^[9][1][ ][6-9][0-9]{9}$", phoneNumber);
+
+        if (number) {
+            System.out.println("Phone number is correct");
+        } else {
+            System.out.println("Phone number is incorrect");
+        }
+    }
+
+    public void validPassword(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter user password");
+        String password = sc.nextLine();
+
+        boolean validatePassword = Pattern.matches("^[a-z]{8,}$",password);
+        if(validatePassword){
+            System.out.println("password is valid");
+        }
+        else{
+            System.out.println("passward is invalid");
+        }
+    }
+
     public static void main(String[] args) {
 
     UserRegistration regex = new UserRegistration();
@@ -357,6 +410,7 @@ public class UserRegistration {
         userRegistration.validEmailId();
 
         userRegistration.validLastName();
+
 
 
 
