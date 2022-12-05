@@ -31,6 +31,7 @@ public class UserRegistration {
         } else {
             System.out.println("lastname is incorrect ");
         }
+
     }
 
     public void validEmailId() {
@@ -44,13 +45,19 @@ public class UserRegistration {
         } else {
             System.out.println("Email is invalid");
         }
+
+
     }
 
     public static void main(String[] args) {
         UserRegistration userRegistration = new UserRegistration();
 //        userRegistration.validFirstName();
+
 //        userRegistration.validLastName();
         userRegistration.validEmailId();
+
+        userRegistration.validLastName();
+
     }
 
 }
